@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mobile simple framework</title>
+        <style type="text/css">
+            .highlight{background-color:#FF0;}
+        </style>
+    </head>
+    <body>
+        <div style="width:500px;height:500px;margin:50px auto; border:1px solid #333;">
+            <span style="border:1px solid #f00;"></span>
+        </div>
+        <script src="ui/js/utils.js"></script>
+        <script>
+            var d = document.find('div')[0],
+                t = d.find('span')[0],
+                a = new Object(),
+                c = {},
+                logit = function(_e){
+                    console.log(_e);
+                };
+
+            // events =========================================== >>>
+            // DOM based -- uses native event dispatcher
+            // t.subscribe('testing', logit);
+            // logit(t.listeners);
+            // t.publish('testing',{'key':'value'});
+            // t.unsubscribe('testing', logit);
+            // logit(t.listeners);
+
+            // pure javascript -- uses listener subscription lists in looping dispatcher
+            // a.subscribe('testing', logit);
+            // logit(a.listeners);
+            // a.publish('testing',{'key':'value'});
+            // a.unsubscribe('testing', logit);
+            // logit(a.listeners);
+
+            // swipes =========================================== >>>
+            // d.recognizeSwipeGesture( 200 );
+            // d.subscribe('swipeL2R', logit);
+
+            // XHR ============================================== >>>
+            // a.subscribe('loadSuccess', function(e){ console.log(e) });
+            // a.loadData('XHR/testData.json', logit);
+
+            // DOM manipulation ================================= >>>
+            // t.before('<div>before</div>');
+            // t.after('<div>after</div>');
+            // c = t.prepend('<b>prepend</b><br>');
+            // t.append('<b>append</b>');
+            // d.prepend('<b>parent prepend</b><br>').addClass('highlight');
+            // c.addClass('highlight');
+        </script>
+    </body>
+</html>
